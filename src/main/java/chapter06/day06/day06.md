@@ -37,3 +37,48 @@
 
 > 반환타입이 '참조형' 이라는 것은 메서드가 '객체의 주소'를 반환한다는 것을 의미한다.
 
+
+#### 클래스 메서드(static메서드)와 인스턴스 메서드
+```
+1. 클래스를 설계할 때, 멤버변수 중 모든 인스턴스에 공통적으로 사용해야하는 것에 static을 붙인다.
+2. 클래스 변수(static변수)는 인스턴스를 생성하지 않아도 사용할 수 있다.
+3. 클래스 메서드(static메서드)는 인스턴스 변수를 사용할 수 없다.
+4. 메서드 내에서 인스턴스 변수를 사용하지 않는다면, static을 붙이는 것을 고려한다.
+```
+
+```java
+public class MemberCall {
+   int iv = 10;
+   static int cv = 20;
+
+   int iv2 = cv;
+   //static int cv2 = iv // error, 클래스 변수는 인스턴스변수를 사용할 수 없음
+   static int cv2 = new MemberCall().iv; // 이렇게 객체 생성 해야함
+
+   static void staticMethod1() {
+      System.out.println(cv);
+//        System.out.println(iv); 에러. 클래스메서드에서 인스턴스변수 사용 불가
+      MemberCall c = new MemberCall(); // 이처럼 객체 생성해주어야 인스턴스 변수 사용가능
+      System.out.println(c.iv);
+   }
+
+   void instanceMethod1() {
+      System.out.println(cv);
+      System.out.println(iv); // 인스턴스 메서드에서는 인스턴스변수 사용 가능
+   }
+
+   static void staticMethod2() {
+      staticMethod1();
+//        instanceMethod1(); 에러. 클래스메서드에서 인스턴스메서드 사용 불가
+      MemberCall c = new MemberCall(); // 이처럼 객체 생성해주어야 인스턴스 변수 사용가능
+      c.instanceMethod1();
+   }
+
+   void instanceMethod2() {
+      staticMethod1();
+      instanceMethod1();
+   }
+}
+```
+
+> 인스턴스멤버간 호출에는 아무런 문제가 없다. 하나의 인스턴스멤버가 존재한다는 것은 인스턴스가 이미 생성되어있다는 것을 의미하며, 즉 다른 인스턴스멤버들도 모두 존재하기 때문이다.
