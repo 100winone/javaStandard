@@ -1,4 +1,4 @@
-package chapter07.day12.day12;
+package chapter07.day12;
 
 import static java.lang.System.out;
 import static java.lang.Math.*;

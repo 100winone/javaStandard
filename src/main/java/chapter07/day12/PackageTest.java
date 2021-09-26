@@ -1,4 +1,4 @@
-package chapter07.day12.day12;
+package chapter07.day12;
 
 public class PackageTest {
     public static void main(String[] args) {

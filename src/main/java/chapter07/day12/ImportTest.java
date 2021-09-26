@@ -1,4 +1,4 @@
-package chapter07.day12.day12;
+package chapter07.day12;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
