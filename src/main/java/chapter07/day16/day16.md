@@ -75,3 +75,51 @@ class Fighter extends Unit implements Fightable{
 }
 ```
 
+```
+오버라이딩 할 때는 조상의 메서드보다 넓은 범위의 접근 제어자를 지정해야 하기 때문에,
+'public abstract'가 생략된 인터페이스 메서드를 구현할 때에는 접근 제어자를 반드시 public으로
+해주어야 한다.
+```
+
+```java
+
+public class Tv {   
+    protected boolean power;
+    protected boolean channel;
+    protected boolean volume;
+    
+    public void power() { power = !power;}
+    public void channelUp() { channel++;}
+    public void channelDown() { channel--;}
+    public void volumeUp() { volume++;}
+    public void volumeDown() { volume--;}
+}
+public class VCR {
+    protected int counter;
+        
+    public void play() {
+    }
+    public void play() {
+    }
+    public void play() {
+    }
+    public void play() {
+    }
+    public void play() {
+    }
+}
+
+class PolyArgumentTest {
+    public static void main(String[] args) {
+        Buyer b = new Buyer();
+
+        b.buy(new Tv());
+        b.buy(new Computer());
+
+        System.out.println("현재 남은 돈은 " + b.money + "만원입니다.");
+        System.out.println("현재 보너스점수는 " + b.bonusPoint + "점입니다.");
+    }
+}
+
+
+```
