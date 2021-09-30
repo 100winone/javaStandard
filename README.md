@@ -39,7 +39,7 @@
 - [x] 14. 다형성(polymorphism) .2021.09.27
 - [x] 15. 추상클래스(abstract class) .2021.09.28
 - [x] 16. 인터페이스(interface) .2021.09.29
-- [ ] 17. 내부 클래스(inner class)
+- [x] 17. 내부 클래스(inner class) .2021.09.30
 
 ### Chapter 8 예외처리(Exception Handling)
 
