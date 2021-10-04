@@ -98,14 +98,19 @@ public class VCR {
     protected int counter;
         
     public void play() {
+        // tape를 재생한다.
     }
-    public void play() {
+    public void stop() {
+        // 재생을 멈춘다.
     }
-    public void play() {
+    public void reset() {
+        counter = 0;
     }
-    public void play() {
+    public int getCounter() {
+        return counter;
     }
-    public void play() {
+    public void setCounter(int c) {
+        counter = c;
     }
 }
 
@@ -121,5 +126,61 @@ class PolyArgumentTest {
     }
 }
 
+```
 
+```java
+// VCR클래스에 정의된 메서드와 일치하는 추상메서드를 갖는 인터페이스를 작성
+public interface IVCR {
+    public void play();
+    public void stop();
+    public void reset();
+    public int getCounter();
+    public void setCounter(int c);
+}
+```
+
+```java
+// IVCR 인터페이스를 구현하고 Tv클래스로부터 상속받는 TVCR클래스를 작성
+// VCR클래스 타입의 참조변수를 멤버변수로 선언하여 IVCR인터페이스의 추상 메서드를 구현하는데 사용
+public class TVCR extends Tv implements IVCR {
+    VCR vcr = new VCR();
+    public void play() {
+        vcr.play();
+    }
+    public void stop() {
+        vcr.stop();
+    }
+    public void reset() {
+        vcr.reset();
+    }
+    public int getCounter() {
+        vcr.getCounter();
+    }
+    public void setCounter(int c) {
+        return vcr.setCounter(c);
+    }
+}
+```
+- VCR클래스의 인스턴스를 사용하면 손쉽게 다중상속을 구현할 수 있음
+- VCR클래스의 내용이 변경되어도 변경된 내용이 TVCR클래스에도 자동적으로 반영
+
+#### 인터페이스를 이용한 다형성
+> 해당 인터페이스 타입의 참조변수로 이를 구현한 클래스의 인스턴스를 참조할 수 있고, 인터페이스 타입으로의 형변환도 가능
+
+```java
+/* 인터페이스 Fightable을 클래스 Fighter가 구현했을 때, 
+ * Fighter인스턴스를 Fightable타입의 참조변수로 참조하는 것이 가능 */
+Fightable f = (Fightable)new Fighter();
+or
+Fightable f = new Fighter();
+```
+
+
+```
+인터페이스는 메서드의 매개변수의 타입으로 사용될 수 있다.
+void attack(Fightable f){
+    ///
+}
+- 메서드 호출 시 해당 인터페이스를 구현한 클래스의 인스턴스를 매개변수로 제공해야 함
+- attack 메서드를 호출할 때는 매개변수로 Fightable인터페이스를 구현한 클래스의 인스턴스를 넘겨주어야 함    
 ```
