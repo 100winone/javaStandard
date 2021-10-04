@@ -182,5 +182,75 @@ void attack(Fightable f){
     ///
 }
 - 메서드 호출 시 해당 인터페이스를 구현한 클래스의 인스턴스를 매개변수로 제공해야 함
-- attack 메서드를 호출할 때는 매개변수로 Fightable인터페이스를 구현한 클래스의 인스턴스를 넘겨주어야 함    
+- attack 메서드를 호출할 때는 매개변수로 Fightable인터페이스를 구현한 클래스의 인스턴스를 넘겨주어야 함   
 ```
+
+```java
+class Fighter extends Unit implements Fightable {
+    public void move(int x, int y){ /**/ }
+    public void attack(Fightable f) { /**/ } // attack(new Fighter()) 와 같음
+}
+
+/* 메서드의 리턴타입으로 인터페이스의 타입을 지정하는 것 역시 가능 */
+Fightable method(){
+    Fighter f = new Fighter();
+    return f; // return new Fighter();
+}
+```
+
+#### 인터페이스의 장점
+```
+- 개발시간을 단축시킬 수 있다.
+- 표준화가 가능하다.
+- 서로 관계없는 클래스들에게 관계를 맺어 줄 수 있다.
+- 독립적인 프로그래밍이 가능하다.
+```
+
+```java
+interface Liftable{
+    void liftOff();
+    void move(int x, int y);
+    void stop();
+    void land();
+}
+
+
+/* 건물을 이루는 특정 클래스 두 개에서만 동작하는 메서드를 추가하고 싶을 때는? */
+class Barrack extends Building implements Liftable{
+    LiftableImpl l = new LIftableImpl();
+    void liftOff() { l.liftOff(); }
+    void move(int x, int y){ l.move(x, y);}
+    void stop(){l.stop();}
+    void land(){l.land();}
+    void trainMarine(){ /* 내용생략 */}
+}
+class Factory extends Building implements Liftable{
+    LiftableImpl l = new LIftableImpl();
+    void liftOff() { l.liftOff(); }
+    void move(int x, int y){ l.move(x, y);}
+    void stop(){l.stop();}
+    void land(){l.land();}
+    void makeTank(){ /* 내용생략 */}
+}
+```
+
+#### 인터페이스의 이해
+```
+- 클래스를 사용하는 쪽(User)과 클래스를 제공하는 쪽(Provider)이 있다.
+- 메서드를 사용(호출)하는 쪽(User)에서는 사용하려는 메서드(Provider)의 선언부만 알면된다.
+```
+
+#### 디폴트 메서드와 static 메서드
+> 기존에는 인터페이스에 추상 메서드만 선언할 수 있었지만, JDK1.8부터 디폴트 메서드와 static메서드도 추가할 수 있게됨
+
+- 디폴트메서드
+  - 추상 메서드의 기본적인 구현을 제공하는 메서드
+  - 추상 메서드가 아니기 때문에 디폴트 메서드가 새로 추가되어도 해당 인터페이스를 구현한 클래스를 변경하지 않아도 된다.
+  ```
+  - 새로 추가된 디폴트 메서드가 기존의 메서드와 이름이 중복되어 충돌되는 경우 해결규칙
+  1. 여러 인터페이스의 디폴트 메서드 간의 충돌
+    - 인터페이스를 구현한 클래스에서 디폴트 메서드를 오버라이딩해야 한다.
+  2. 디폴트 메서드와 조상 클래스의 메서드 간의 충돌
+    - 조상 클래스의 메서드가 상속되고, 디폴트 메서드는 무시된다.
+  ```
+  
