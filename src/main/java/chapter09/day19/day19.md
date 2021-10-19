@@ -6,15 +6,15 @@
 ### java.lang패키지
 > 가장 기본이 되는 클래스들을 포함하고, java.lang패키지의 클래스들은 import문 없이도 사용 가능
 
-####hashCode
+#### hashCode
 - 문자열의 내용이같으면 항상 동일한 해시코드값을 얻음 
   - 만약 str1 == str2 == "HELLO" 라면  str1.hashCode(), str2.hashCode()의 값은 같음
   - but, System.identityHashCode(str1), System.identityHashCode(str2)의 값은 다름
 
-####toString
+#### toString
 - 인스턴스에 대한 정보를 문자열로 제공할 목적으로 정의
 
-####clone
+#### clone
 - 자신을 복제하여 새로운 인스턴스를 생성
 
 ex)
