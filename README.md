@@ -43,12 +43,12 @@
 
 ### Chapter 8 예외처리(Exception Handling)
 
-- [ ] 18. 예외처리(exception handling) .2021.10.01
-- [ ] 19. 메서드에 예외 선언하기 .2021.10.02
+- [x] 18. 예외처리(exception handling) .2021.10.17
+- [x] 19. 메서드에 예외 선언하기 .2021.10.18
 
 ### Chapter 9 java.lang패키지와 유용한 클래스
 
-- [ ] 20. java.lang패키지 .2021.10.03
+- [ ] 20. java.lang패키지 .2021.10.19
 - [ ] 21. 유용한 클래스
 
 ### Chapter 10 날짜와 시간 & 형식화
