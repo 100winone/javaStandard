@@ -48,3 +48,37 @@ public class CloneEx1 {
 }
 ```
 
+#### String클래스
+
+- 변경 불가능한(immutable) 클래스
+- 문자열을 저장하고 이를 다루는데 필요한 메서드를 제공
+- 덧셈 연산자 '+'를 사용하여 문자열을 결합하는 것은 연산 시 마다 새로운 문자열을 가진 String인스턴스가 생성되어 메모리 공간 차지
+
+
+```
+String s = new String("Hello");              -> s = "Hello"
+
+char[] c = {'H', 'e', 'l', 'l', 'o '};
+String s = new String(c);                    -> s = "Hello"
+
+StringBuffer sb = new StringBuffer("Hello");
+String s = new String(sb);                   -> s = "Hello"
+
+```
+
+#### 문자 인코딩 변환
+- getBytes() 사용하면 문자열의 문자 인코딩을 다른 인코딩으로 변경 가능
+```
+byte[] utf8_str = "가".getBytes("UTF-8");    // 문자열을 UTF-8로 변환
+String str = new String(utf8_str, "UTF-8"); // byte배열을 문자열로 변환
+```
+
+#### StringBuffer클래스와 StringBuilder클래스
+
+- StringBuffer클래스
+```
+- 인스턴스를 생성할 때 문자열 변경이 가능
+- 인스턴스 생성시 그 크기를 지정 가능
+- equals메서드를 오버라이딩하지 않아서 equals메서드를 사용하여도 "=="를 사용하는 것과 같은 결과를 얻음
+```
+
