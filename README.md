@@ -43,64 +43,63 @@
 
 ### Chapter 8 예외처리(Exception Handling)
 
-- [x] 18. 예외처리(exception handling) .2021.10.17
-- [x] 19. 메서드에 예외 선언하기 .2021.10.18
+- [x] 18. 예외처리(exception handling) .2021.10.18
 
 ### Chapter 9 java.lang패키지와 유용한 클래스
 
-- [ ] 20. java.lang패키지 .2021.10.19
-- [ ] 21. 유용한 클래스
+- [ ] 19. java.lang패키지 .2021.10.19
+- [ ] 20. 유용한 클래스
 
 ### Chapter 10 날짜와 시간 & 형식화
 
-- [ ] 22. 날짜와 시간
-- [ ] 23. 형식화 클래스
-- [ ] 24. java.time패키지
+- [ ] 21날짜와 시간
+- [ ] 22. 형식화 클래스
+- [ ] 23. java.time패키지
 
 ### Chapter 11 컬렉션 프레임웍
 
-- [ ] 25. 컬렉션 프레임웍(Collection Framework)
-- [ ] 26. Stack과 Queue
-- [ ] 27. Arrays
-- [ ] 28. HashMap과 Hashtable
-- [ ] 29. 컬렉션 클래스 정리 & 요약
+- [ ] 24. 컬렉션 프레임웍(Collection Framework)
+- [ ] 25. Stack과 Queue
+- [ ] 26. Arrays
+- [ ] 27. HashMap과 Hashtable
+- [ ] 28. 컬렉션 클래스 정리 & 요약
 
 ### Chapter 12 지네릭스, 열거형, 애너테이션
 
-- [ ] 30. 제네릭스(Generics)
-- [ ] 31. 열거형(enums)
-- [ ] 32. 애너테이션(annotation)
+- [ ] 29. 제네릭스(Generics)
+- [ ] 30. 열거형(enums)
+- [ ] 31. 애너테이션(annotation)
 
 ### Chapter 13 쓰레드(Thread)
 
-- [ ] 33. 프로세스와 쓰레드
-- [ ] 34. 쓰레드의 구현과 실행
-- [ ] 35. start()와 run()
-- [ ] 36. 싱글쓰레드와 멀티쓰레드
-- [ ] 37. 쓰레드의 우선순위
-- [ ] 38. 쓰레드 그룹(thread group)
-- [ ] 39. 데몬 쓰레드(daemon thread)
-- [ ] 40. 쓰레드의 실행제어
-- [ ] 41. 쓰레드의 동기화
+- [ ] 32. 프로세스와 쓰레드
+- [ ] 33. 쓰레드의 구현과 실행
+- [ ] 34. start()와 run()
+- [ ] 35. 싱글쓰레드와 멀티쓰레드
+- [ ] 36. 쓰레드의 우선순위
+- [ ] 37. 쓰레드 그룹(thread group)
+- [ ] 38. 데몬 쓰레드(daemon thread)
+- [ ] 39. 쓰레드의 실행제어
+- [ ] 40. 쓰레드의 동기화
 
 ### Chapter 14 람다와 스트림
 
-- [ ] 42. 람다식
-- [ ] 43. 스트림(stream)
-- [ ] 44. Optional〈T〉와 OptionalInt
-- [ ] 45. collect()
+- [ ] 41. 람다식
+- [ ] 42. 스트림(stream)
+- [ ] 43. Optional〈T〉와 OptionalInt
+- [ ] 44. collect()
 
 ### Chapter 15 입출력(I/O)
 
-- [ ] 46. 자바에서의 입출력
-- [ ] 47. 바이트기반 스트림
-- [ ] 48. 바이트기반의 보조스트림
-- [ ] 49. 문자기반 스트림
-- [ ] 50. 문자기반의 보조스트림
-- [ ] 51. 표준입출력과 File
-- [ ] 52. 직렬화(Serialization)
+- [ ] 45. 자바에서의 입출력
+- [ ] 46. 바이트기반 스트림
+- [ ] 47. 바이트기반의 보조스트림
+- [ ] 48. 문자기반 스트림
+- [ ] 49. 문자기반의 보조스트림
+- [ ] 50. 표준입출력과 File
+- [ ] 51. 직렬화(Serialization)
 
 ### Chapter 16 네트워킹(Networking)
 
-- [ ] 53. 네트워킹(Networking)
-- [ ] 54. 소켓 프로그래밍
+- [ ] 52. 네트워킹(Networking)
+- [ ] 53. 소켓 프로그래밍
