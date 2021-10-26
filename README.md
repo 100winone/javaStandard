@@ -53,7 +53,7 @@
 ### Chapter 11 컬렉션 프레임웍
 
 - [x] 21. 컬렉션 프레임웍(Collection Framework) | 10.25
-- [ ] 22. Stack과 Queue
+- [x] 22. Stack과 Queue | 10.26
 - [ ] 23. Arrays
 - [ ] 24. HashMap과 Hashtable
 - [ ] 25. 컬렉션 클래스 정리 & 요약
